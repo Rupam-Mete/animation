@@ -27,3 +27,70 @@ body {
     100% { background-position: 0% 50%; }
 }
 
+#canvas-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* UI Overlay Optimized for Mobile */
+#ui {
+    position: relative; /* Changed from absolute for better mobile flow */
+    margin-top: 40px;    /* Space from top of screen */
+    width: 85%;         /* Uses percentage instead of fixed px */
+    max-width: 400px;
+    color: white;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    pointer-events: auto; /* Allow interaction with tags */
+}
+
+/* Instruction tags scaling for small screens */
+.instruction-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.tag {
+    background: rgba(0, 255, 204, 0.1);
+    padding: 8px 12px;
+    border-radius: 10px;
+    font-size: 0.7rem; /* Slightly smaller text for small screens */
+    color: #00ffcc;
+    border: 1px solid rgba(0, 255, 204, 0.3);
+    white-space: nowrap;
+}
+
+h1 {
+    margin: 0 0 8px 0;
+    font-size: 1.1rem;
+    letter-spacing: 1px;
+}
+
+p {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    color: #ccc;
+}
+
+.highlight {
+    color: #00ffcc;
+    font-weight: bold;
+}
+
+/* Hiding video elements safely */
+#video-container {
+    display: none;
+}
