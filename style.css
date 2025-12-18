@@ -1,0 +1,29 @@
+/* Ensure the container fits the dynamic mobile screen exactly */
+html, body {
+    height: 100dvh; /* Dynamic height accounts for mobile browser bars */
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    overflow: hidden; /* Prevents unwanted bouncing/scrolling */
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /* ANIMATED BACKGROUND */
+    background: linear-gradient(-45deg, #000000, #0a1128, #001f1f, #080808);
+    background-size: 400% 400%;
+    animation: aurora 15s ease infinite;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start; /* Better for mobile content flow */
+}
+
+@keyframes aurora {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
